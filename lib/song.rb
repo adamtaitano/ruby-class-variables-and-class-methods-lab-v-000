@@ -29,14 +29,14 @@ def self.artists
 end
 
 def self.genre_count
-  @@genres.each do |genre|
+  @@genres.collect do |genre|
     if @@genre_count[genre] != nil
       @@genre_count[genre] += 1
     else
       @@genre_count[genre] = 1
     end
   end
-  @@genre_count
+  # @@genre_count
 end
 
 def self.artist_count
